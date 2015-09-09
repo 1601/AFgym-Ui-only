@@ -45,7 +45,7 @@ class login extends CI_Controller {
 			
 			$this->session->set_userdata($data);
 			//print_r($this->session->userdata('functionalities'));
-			redirect("users/");
+			redirect("dashboard/");
 		}
 		else{
 			$this->view_login("Incorrect Username or Password");
