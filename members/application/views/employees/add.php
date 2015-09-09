@@ -1,0 +1,65 @@
+<div class="osx_form">
+	<h3 class="errors" id="error_field"></h3>
+	 <?php echo form_open("employees/add_employees");?> 
+	<table>
+		<tr>
+			<i style="font-size:12px;"> <span class="denote">*</span> denotes required field </i>
+		</tr>
+		<tr>
+			<td><label for="FirstName">First name <span class="denote">*</span></label></td>
+			<td><input required="required" type="text" name="FirstName" id="FirstName"></td>
+		</tr>
+		<tr>
+			<td><label for="LastName">Last name <span class="denote">*</span></label></td>
+			<td><input required="required" type="text" name="LastName" id="LastName"></td>
+		</tr>
+		<tr>
+			<td><label for="LastName">Address <span class="denote">*</span></label></td>
+			<td><input required="required" type="text" name="Address" id="Address"></td>
+		</tr>
+		<tr>
+			<td><label for="LastName">Contact Number</label></td>
+			<td><input type="text" name="ContactNumber" id="ContactNumber"></td>
+		</tr>
+		<tr>
+			<td><label for="LastName">Username <span class="denote">*</span></label></td>
+			<td><input required="required" type="text" name="Username" id="Username"></td>
+		</tr>
+		<tr>
+			<td><label for="Password">Password<span class="denote">*</span></label></td>
+			<td><input type="text" name="Password" id="Password"></td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				<p>or</p>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onClick = "pw()" type="button" name="Password" id="Address" >Generate Random Password</button></td>
+		</tr>
+		<tr>
+			<td colspan = "2" style="text-align: right;">
+				<p class = "escape"> Press ESC to cancel</p>
+				<?php echo form_submit("submit", "Submit", "id='submitForm'");?>
+			</td>
+		</tr>
+	</table>
+	<?php echo form_close();?>
+</div>
+
+<script>
+		function pw()
+		{
+			var length = Math.round((Math.random()*3)+8);
+			var str = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_?/:(){}[]0123456789';
+			var max = str.length;
+			var password = '';
+			for (var i = 0; i<length; i++){
+				password = password.concat(str.charAt(Math.round((Math.random()*max))-1));
+			}
+			document.getElementById("Password").value = password;
+		}		
+</script>
