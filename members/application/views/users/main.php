@@ -1,3 +1,4 @@
+<div class="col-md-8">
 	<section class = "contents">
 		<?php if($message != ""){echo "<h5 class='message'>".$message."</h5>";}?>
 		
@@ -44,6 +45,7 @@
 		</div>
 		
 		<?php if($num_rows != 0):?>
+		<div class="table-responsive">	
 			<table class="table_list">
 				<tr>
 					<?php foreach($fields as $field_name => $field_display):?>
@@ -70,6 +72,7 @@
 				</tr>
 				<?php endforeach;?>		
 			</table>	
+		</div>
 		<?php endif;?>
 	</section>
 </section>
@@ -96,3 +99,7 @@
 		  return false;
 	  });
 </script>
+		
+	</div>  <!-- col-md-8 Sam page -->
+
+</div> <!-- </div>  row from aside.php none yet-->

@@ -37,7 +37,7 @@ this.d.container.hide().remove();this.d.overlay.hide();this.d.iframe&&this.d.ifr
 					containerId: 'osx-container',
 					closeHTML: null,
 					opacity: 65, 
-					position: ['0',],
+					position: ['100px',],
 					overlayClose: true,
 					onOpen: OSX.open,
 					onClose: OSX.close
@@ -90,7 +90,7 @@ this.d.container.hide().remove();this.d.overlay.hide();this.d.iframe&&this.d.ifr
 					containerId: 'osx-container',
 					closeHTML: null,
 					opacity: 65, 
-					position: ['0',],
+					position: ['100px',],
 					overlayClose: true,
 					onOpen: OSX.open,
 					onClose: OSX.close
@@ -143,7 +143,7 @@ this.d.container.hide().remove();this.d.overlay.hide();this.d.iframe&&this.d.ifr
 					containerId: 'osx-container',
 					closeHTML: null,
 					opacity: 65, 
-					position: ['0',],
+					position: ['100px',],
 					overlayClose: true,
 					onOpen: OSX2.open,
 					onClose: OSX2.close

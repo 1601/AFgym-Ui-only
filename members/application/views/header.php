@@ -39,14 +39,13 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </button> 
                 <a class="navbar-brand" href="<?php echo base_url();?>dashboard/">
                 <img src="http://localhost/afgym/members/Images/adrenaline.jpg" alt="logo" style="display: initial !important;
                 	width: 133px;
@@ -54,66 +53,80 @@
                 	IGym
                 </a>
             </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav" id="gone-when-small">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-                		<?php 
-							$firstname = $this->session->userdata('first_name');
-							$lastname = $this->session->userdata('last_name');
-							echo $firstname . " " . $lastname;
-							echo "<!--<span class='usertype-header'>";
-							$usertype = $this->session->userdata('user_type');
-							switch($usertype){
-							case '1': echo "Super Admin"; break;
-							case '2': echo "Admin"; break;
-							case '3': echo "Management"; break;
-							case '4': echo "Staff"; break;
-							case '5': echo "Warehouse Staff"; break;
-							default: echo "Developer"; break;
-						}
-						echo "</span>-->";?>
+            <div>
+            <!-- For the  right -->
+                 <ul class="nav navbar-right top-nav pull-right" id="gone-when-small">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+                            <?php 
+                                $firstname = $this->session->userdata('first_name');
+                                $lastname = $this->session->userdata('last_name');
+                                echo $firstname . " " . $lastname;
+                                echo "<!--<span class='usertype-header'>";
+                                $usertype = $this->session->userdata('user_type');
+                                switch($usertype){
+                                case '1': echo "Super Admin"; break;
+                                case '2': echo "Admin"; break;
+                                case '3': echo "Management"; break;
+                                case '4': echo "Staff"; break;
+                                case '5': echo "Warehouse Staff"; break;
+                                default: echo "Developer"; break;
+                            }
+                            echo "</span>-->";?>
 
-                     <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#" onClick="osxProfile()"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#" onClick="osxPassword()"><i class="fa fa-fw fa-gear"></i> Change Password</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="<?php echo base_url();?>login/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                         <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" onClick="osxProfile()"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" onClick="osxPassword()"><i class="fa fa-fw fa-gear"></i> Change Password</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<?php echo base_url();?>login/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="collapse navbar-ex1-collapse"> <!-- collapse navbar-collapse -->
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="<?=base_url()?>dashboard/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="<?=base_url()?>dashboard/">
+                         Dashboard <i class="pull-right fa fa-fw fa-dashboard"></i>
+                         </a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Graphs</a>
+                        <a href="#">
+                       Graphs  <i class="pull-right fa fa-fw fa-bar-chart-o"></i></a>
                     </li>
                     <li>
-                        <a href="<?=base_url()?>users/"><i class="fa fa-fw fa-table"></i> Members</a>
+                        <a href="<?=base_url()?>users/">
+                       Members  <i class="pull-right fa fa-fw fa-table"></i></a>
                     </li>
                     <li>
-                        <a href="<?=base_url()?>employees/"><i class="fa fa-fw fa-table"></i> Staff</a>
+                        <a href="<?=base_url()?>employees/">
+                        Staff <i class="pull-right fa fa-fw fa-table"></i></a>
                     </li>
                     <span>More</span>
                     </hr>
                     <li>
-                        <a href="#"><i class="fa fa-fw fa-table"></i> Calendar</a>
+                        <a href="#">
+                        Calendar <i class="pull-right fa fa-fw fa-table"></i></a>
                     </li>
                     <li>
-                        <a href="http://localhost/afgym/admin"><i class="fa fa-fw fa-desktop"></i> Front End Admin</a>
+                        <a href="http://localhost/afgym/admin">
+                        Front End Admin <i class="pull-right fa fa-fw fa-desktop"></i></a>
                     </li>
                     <li>
-                        <a href="http://localhost/afgym"><i class="fa fa-fw fa-desktop"></i> Gym Web Site</a>
+                        <a href="http://localhost/afgym">
+                       Gym Web Site  <i class="pull-right fa fa-fw fa-desktop"></i></a>
+                    </li>
+                    <li class="toggle-link" id="sidenav-toggle">
+                        <a href="#">
+                        Collapse  <i class="pull-right fa fa-fw fa-arrow-circle-left fa-fw"></i> </a>
                     </li>
                     <li class="dropdown" id="gone-when-big">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
@@ -242,3 +255,6 @@
 			}
 		</script>
 
+      <div id="page-content-wrapper">
+       
+        <div class="page-content inset">

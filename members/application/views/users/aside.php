@@ -1,4 +1,7 @@
-<section class="main_container">
+<!-- <section class="main_container"> -->
+<div  class="row"> 
+	<div class="col-md-4">
+	
 	<aside class = "sidebar">
 		<h3><?php echo $page_header;?></h3>
 		<ul>
@@ -33,6 +36,8 @@
 		</ul>
 	</aside>
 	
+	</div>
+	<!--End of COl-md-4 -->
 	
 	<script>
 		$("#sure").click(function(){

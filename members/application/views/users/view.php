@@ -44,11 +44,11 @@
 			$('#hide').css('display', 'none');
 		}
 	</script>
-	<div class = "osx_form">
+	<div class = "osx_form table-responsive">
 		<h2 style="color: blue;"> User <?php echo $id;?></h2>
 		<?php echo form_open("users/edit_user/" . $id);?>
 			<?php foreach($user as $row):?>
-				<table>
+				<table class="table table-bordered table-hover table-striped">
 					<col width="160px">
 					<tr>
 						<td>First name:</td>

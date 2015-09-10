@@ -1,7 +1,15 @@
-		<footer>
+	  </div>
+     <!-- id="page-content-wrapper"> -->
+       
+        </div>
+        <!-- class="page-content inset"> -->
+  </div>   
+  <!-- #wrapper -->
+
+  	<footer>
 			Adrenaline Fitness Alpha ver 1.0 Copyright &copy; 2015<?php if(date('Y') != '2015'){echo "-" . date('Y');}?>. 
 		</footer>
-	<!-- jQuery -->
+	   <!-- jQuery -->
     <script src="<?php echo base_url();?>jsui/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -21,6 +29,13 @@
 
     <!-- To dolist JS -->
     <script src="<?php echo base_url();?>jsui/todolist.js"></script>
+    <script src="<?php echo base_url();?>jsui/foundation.min.js"></script>
+    <script type="text/javascript">
+      $("#sidenav-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+      });
+    </script>
 </body>
 
 </html>

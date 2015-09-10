@@ -1,4 +1,4 @@
-<div class="osx_form">
+<div class="osx_form table-responsive">
 	<h3 class="errors" id="error_field"></h3>
 	 <?php echo form_open("users/add_users");?> 
 	<table>
@@ -34,7 +34,7 @@
 			<td><button onClick = "pw()" type="button" name="Password" id="Generate" >Generate Random Password</button></td>
 		</tr>
 		<tr>
-			<td colspan = "2" style="text-align: right;">
+			<td colspan = "2" class="submit-add-user">
 				<p class = "escape"> Press ESC to cancel</p>
 				<?php echo form_submit("submit", "Submit", "id='submitForm'");?>
 			</td>

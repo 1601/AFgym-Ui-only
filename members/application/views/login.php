@@ -1,5 +1,8 @@
 <html>
 	<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title> <?php echo $title;?></title>
 				<style>
 					*{
@@ -13,8 +16,8 @@
 						box-shadow: 0 2px 6px #959595;
 						height: 266px;
 						margin: 10px auto;
-						padding: 15px;
-						width: 370px;
+						/*padding: 15px;*/
+						width: 100%;
 						}			
 					h1 {				
 						color: #202020;				
@@ -29,13 +32,23 @@
 						letter-spacing: 10px;				
 						line-height: 0.8;			
 					}
+
 					.login-logo {
-						    width: 399px;
-						    display: block;
+						    width: 100%;
+						     display: block;
 						    margin-left: auto;
 						    margin-right: auto;
 						    margin-top: 100px;
+					}
+
+					@media(min-width:768px) {
+						.login-logo {
+						    width: 375px !important;						   
 						}
+						#login {
+						    width: 375px !important;						   
+						}
+					}
 						.login-logo img {
 						    width: 100%;
 						    height: auto;
@@ -44,7 +57,7 @@
 						border: 1px solid #000000;				
 						display: block;				
 						margin: 10px auto;				
-						padding: 10px;				
+						padding: 10px 0px;				
 						width: 300px;				
 						box-shadow: 2px 2px 2px #999;			
 					}			
@@ -58,7 +71,7 @@
 						display: block;				
 						font-size: 14px;				
 						margin: 10px auto;				
-						padding: 8px;				
+						padding: 8px 0px;				
 						width: 300px;				
 						box-shadow: 2px 2px 2px #999;				
 						cursor: pointer;				
@@ -78,7 +91,7 @@
 					}		
 				</style>		
 			</head>		
-			<body>			
+			<body class="container">			
 				<div class="login-logo">
 					<img src="<?php echo base_url(); ?>Images/adrenaline.jpg" alt="logo">
 				</div>

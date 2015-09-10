@@ -112,8 +112,10 @@ ul.alert-dropdown {
 
 /* Side Navigation */
 
-@media(min-width:768px) {
-    .side-nav {
+
+/*Darlo ilagan*/
+
+ .side-nav {
         position: fixed;
         top: 51px;
         left: 225px;
@@ -128,40 +130,83 @@ ul.alert-dropdown {
         padding-bottom: 40px;
     }
 
+    #wrapper.active nav div .side-nav {
+        left: 45px;
+        animation: sidebarSlideInLeft .2s;
+        -webkit-animation: sidebarSlideInLeft .2s;
+    }
+
+    #wrapper.active {
+        padding-left: 0px;
+    }    
+
+     .collapse.in {
+        display: block;
+          animation: sidebarSlideInLeft .2s;
+        -webkit-animation: sidebarSlideInLeft .2s;
+    }
+    .collapse {
+       display: none
+         animation: sidebarSlideInLeft .2s;
+        -webkit-animation: sidebarSlideInLeft .2s;
+    }
+/*daroo*/
+
+@media(min-width:768px) {
+
+    .collapse.in {
+        display: block;
+    }
+    .collapse {
+       display: block;
+    }
+    #wrapper.active {
+        padding-left: 45px !important;
+    }
+    #wrapper {
+        padding-left: 225px !important;
+    }
     .side-nav>li>a {
         width: 225px;
     }
 
-    .side-nav li a:hover,
-    .side-nav li a:focus {
-        outline: none;
-        background-color: #000 !important;
+    #page-wrapper {
+        margin-top: 0px !important;
+    }
+
+    #gone-when-big{
+        display: none !important;
     }
 
     #gone-when-small{
         display: initial !important;
     }
 
-     #gone-when-big{
-        display: none !important;
-    }
-
-    #page-wrapper {
+    #wrapper {
+        padding-left: 0;
         margin-top: 0px !important;
     }
-}
-/*End of Small screen config*/
 
-#page-wrapper {
-    margin-top: -40px;
 }
-#gone-when-small{
-    display: none;
+/*End of big screen config*/
+
+#wrapper {
+        padding-left: 0;
+        margin-top: -45px ;
 }
 
 #gone-when-big{
     display: initial;
-} 
+}
+
+#gone-when-small{
+    display: none;
+}
+
+#page-wrapper {
+    margin-top: -40px;
+}
+
 
 .side-nav>li>ul {
     padding: 0;
@@ -268,6 +313,15 @@ nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
     background-color: #f5f5f5 !important;
     font-size: bold;
 }
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #000;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #EF1515;
+    }
 
 
 /*todo list css*/
